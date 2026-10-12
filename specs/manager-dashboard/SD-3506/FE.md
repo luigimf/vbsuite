@@ -1,7 +1,9 @@
-# FE — Manager Virtual Bench Suite page (view only)
+# FE — Manager Technology Capacity Catalogue page (view only)
 
-Angular handoff for **SD-3506**. The page at **/virtual-bench-suite**: the client-facing mirror of
-the Master VB Suite, **view only**, synced in real time from the internal tool that sets the benches
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in UI copy; the manager-facing page title and profile drop-down option read **Castillians® Capacity Catalogue**. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
+
+Angular handoff for **SD-3506**. The page at **/technology-capacity-catalogue**: the client-facing mirror of
+the Master Technology Capacity Catalogue, **view only**, synced in real time from the internal tool that sets the benches
 up.
 
 > ### ⚠ The prototype's menubar is not part of this work
@@ -20,7 +22,7 @@ no engineer search, no drag, no delete.
 
 ## Header card
 
-- Title **Virtual Bench Suite**, Bricolage 42px/700 (30px below 720px).
+- Title **Castillians® Capacity Catalogue** (the registered mark is part of the title), Bricolage 42px/700 (30px below 720px).
 - Intro, body 17px `var(--gray-700)`, max 700px: "Ready-to-go Virtual Benches managed by
   Castillians. These operate as on-demand, continuous capability layers backed by verified
   engineering capacity on subscription, aligned with leading vendor ecosystems."
@@ -51,7 +53,7 @@ no engineer search, no drag, no delete.
 
 ## Bench detail
 
-- **Back to Virtual Bench Suite** — arrow + label, top-left.
+- **Back to Technology Capacity Catalogue** — arrow + label, top-left.
 - **Enquire about this V Bench** — top-right, 35px, mail glyph, `#F8F8F8` fill, 2px `#E5E5E5`.
 - Head card: vendor lockup, type tag, bench name (42px). **No status Select, no Delete.**
 - **Skills Mix**, **Skills Matrix**, **What It Delivers**, **Outcome** — identical presentation to
@@ -114,7 +116,7 @@ order set internally.
 ../../internal-dashboard/SD-3502/    the master benches and their statuses
 ../../internal-dashboard/SD-3503/    the content, rate and engineer lists being mirrored
 ../../internal-dashboard/SD-3504/    which managers and which benches this client sees
-../../../prototype/index.html        → Manager Dashboard → Virtual Bench Suite
+../../../prototype/index.html        → Manager Dashboard → Technology Capacity Catalogue
 ```
 
 Repository: https://github.com/luigimf/vbsuite

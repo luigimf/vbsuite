@@ -1,10 +1,12 @@
-# BE — Manager Virtual Bench Suite page (view only)
+# BE — Manager Technology Capacity Catalogue page (view only)
+
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in UI copy; the manager-facing page title and profile drop-down option read **Castillians® Capacity Catalogue**. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
 
 Backend specification for **SD-3506**.
 
 ---
 
-## `GET /manager/virtual-bench-suite`
+## `GET /manager/technology-capacity-catalogue`
 
 Query: `type` (`All` default).
 
@@ -83,7 +85,7 @@ Applied on **every** request, in this order:
 
 ## Enquiry submission
 
-`POST /manager/virtual-bench-suite/{benchId}/enquiries` — `capacityHours`, `preferredStart`,
+`POST /manager/technology-capacity-catalogue/{benchId}/enquiries` — `capacityHours`, `preferredStart`,
 `note`.
 
 **Acceptance criteria**
@@ -110,7 +112,7 @@ Applied on **every** request, in this order:
 ../../internal-dashboard/SD-3502/BE.md  master record, status lifecycle, publish sync
 ../../internal-dashboard/SD-3503/BE.md  rate derivation and engineer lists
 ../../internal-dashboard/SD-3504/BE.md  client_vb_suite_access and access resolution
-../../../prototype/index.html           → Manager Dashboard → Virtual Bench Suite
+../../../prototype/index.html           → Manager Dashboard → Technology Capacity Catalogue
 ```
 
 Repository: https://github.com/luigimf/vbsuite

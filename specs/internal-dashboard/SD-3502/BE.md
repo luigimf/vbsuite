@@ -1,4 +1,6 @@
-# BE — VB Suite tab (master bench index)
+# BE — Technology Capacity Catalogue tab (master bench index)
+
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in all UI copy. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
 
 Backend specification for **SD-3502**.
 
@@ -119,7 +121,7 @@ Archived   → withdrawn from manager dashboards; retained internally with its h
 ```
 ../SD-3503/BE.md               rate, capacity and engineer-list rules
 ../SD-3504/BE.md               per-client access resolution
-../../../prototype/index.html  → Internal Dashboard → V Benches → VB Suite
+../../../prototype/index.html  → Internal Dashboard → V Benches → Technology Capacity Catalogue
 ```
 
 Repository: https://github.com/luigimf/vbsuite

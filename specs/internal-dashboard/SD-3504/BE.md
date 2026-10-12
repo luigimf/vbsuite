@@ -1,4 +1,6 @@
-# BE — Manage Client modal: Cobranded field move + VB Suite Access
+# BE — Manage Client modal: Cobranded field move + Technology Capacity Catalogue Access
+
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in all UI copy. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
 
 Backend specification for **SD-3504**.
 
@@ -12,7 +14,7 @@ Backend specification for **SD-3504**.
 - If the Manage Client payload groups fields by box, the field moves group — the value itself is
   untouched and an existing client's saved value must read back identically.
 
-## 2. VB Suite access record
+## 2. Technology Capacity Catalogue access record
 
 `client_vb_suite_access` — one row per client.
 
@@ -57,7 +59,7 @@ if (!access.allBenches)  benches = benches ∩ benchIds
 - `published(...)` is applied **first and always**: an id in `benchIds` whose bench is Draft or
   Archived yields nothing.
 - The manager and bench conditions compose as **AND**.
-- A manager with no access receives an empty list **and** the Virtual Bench Suite entry point is
+- A manager with no access receives an empty list **and** the Technology Capacity Catalogue entry point is
   withheld — not an empty page they can navigate to.
 
 ## Propagation

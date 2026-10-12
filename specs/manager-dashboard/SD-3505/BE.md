@@ -1,4 +1,6 @@
-# BE — Manager menubar & profile drop-down: Virtual Bench Suite access
+# BE — Manager menubar & profile drop-down: Technology Capacity Catalogue access
+
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in UI copy; the manager-facing page title and profile drop-down option read **Castillians® Capacity Catalogue**. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
 
 Backend specification for **SD-3505**.
 
@@ -11,7 +13,7 @@ The menu must not be assembled from data the client guesses at. Add an explicit 
 ```json
 {
   "entitlements": {
-    "virtualBenchSuite": { "enabled": true, "route": "/virtual-bench-suite" }
+    "virtualBenchSuite": { "enabled": true, "route": "/technology-capacity-catalogue" }
   }
 }
 ```
@@ -29,7 +31,7 @@ The menu must not be assembled from data the client guesses at. Add an explicit 
 ## Route guard
 
 **Acceptance criteria**
-- `GET /virtual-bench-suite` data endpoints re-check the entitlement **per request**. A menu that
+- `GET /technology-capacity-catalogue` data endpoints re-check the entitlement **per request**. A menu that
   was rendered a minute ago is not authorisation.
 - An unauthorised request returns **403**, never an empty 200 — an empty list and "not allowed" must
   be distinguishable by the client.

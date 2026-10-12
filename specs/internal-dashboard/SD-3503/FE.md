@@ -1,6 +1,8 @@
-# FE — VB Suite bench page
+# FE — Technology Capacity Catalogue bench page
 
-Angular handoff for **SD-3503**. The page **View V Bench** opens from a card on the VB Suite tab:
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in all UI copy. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
+
+Angular handoff for **SD-3503**. The page **View V Bench** opens from a card on the Technology Capacity Catalogue tab:
 the full master record for one bench, and the only place its content, rate inputs and engineer
 lists are edited.
 
@@ -17,7 +19,7 @@ lists are edited.
 ## Frame
 
 - Replaces the tab body in place — same page, same tab row, no route change in the prototype;
-  build it as a child route of the VB Suite tab.
+  build it as a child route of the Technology Capacity Catalogue tab.
 - **Back to all** — arrow + label, body 13px/600 `var(--gray-700)`, darkens to ink on hover.
 - Sections are stacked `Card`s, 24px apart, each with a 52px section glyph, a Bricolage 26px/700
   title and a 14px `var(--gray-700)` sub-line. Section headers stack vertically below 720px.
@@ -111,9 +113,9 @@ An **explorer**, not a client setting.
 
 ## Delete bench
 
-Confirm modal (max 520px): "This permanently removes **{bench}** from the VB Suite, with its skills
+Confirm modal (max 520px): "This permanently removes **{bench}** from the Technology Capacity Catalogue, with its skills
 mix, value proposition and engineer lists. Clients it has been shared with lose access to it."
-Danger CTA + Cancel. On success, return to the VB Suite tab.
+Danger CTA + Cancel. On success, return to the Technology Capacity Catalogue tab.
 
 ---
 
@@ -122,7 +124,7 @@ Danger CTA + Cancel. On success, return to the VB Suite tab.
 ```
 ../SD-3502/                    the index, card actions and the create/edit modal
 ../SD-3504/                    per-client access to published benches
-../../../prototype/index.html  → Internal Dashboard → V Benches → VB Suite → View V Bench
+../../../prototype/index.html  → Internal Dashboard → V Benches → Technology Capacity Catalogue → View V Bench
 ```
 
 Repository: https://github.com/luigimf/vbsuite

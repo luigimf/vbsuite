@@ -1,6 +1,8 @@
-# FE — VB Suite tab (master bench index)
+# FE — Technology Capacity Catalogue tab (master bench index)
 
-Angular handoff for **SD-3502**. A new **VB Suite** tab on the Internal **V Benches** page: the
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in all UI copy. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
+
+Angular handoff for **SD-3502**. A new **Technology Capacity Catalogue** tab on the Internal **V Benches** page: the
 master template where our team builds the benches partners and clients demo.
 
 > ### ⚠ The prototype's menubar is not part of this work
@@ -16,7 +18,7 @@ master template where our team builds the benches partners and clients demo.
 ## Where it sits
 
 - Fourth tab on **V Benches**, in this order: **Manage V Benches · Subscriptions · Mark-Ups &
-  Discounts · VB Suite**. Appended — the three existing tabs are untouched.
+  Discounts · Technology Capacity Catalogue**. Appended — the three existing tabs are untouched.
 - Tab row: 10px gap, wraps; below 900px it scrolls horizontally with `white-space: nowrap` rather
   than wrapping mid-label.
 - Tab: Bricolage **23px**, weight **700** active / **500** idle, `var(--ink-900)` active /
@@ -35,8 +37,8 @@ master template where our team builds the benches partners and clients demo.
 
 ## Header
 
-- Title **Master VB Suite**, Bricolage 26px/700.
-- Intro, body 14px `var(--gray-700)`, max 620px: "Our official Virtual Bench Suite, built by our
+- Title **Master Technology Capacity Catalogue**, Bricolage 26px/700.
+- Intro, body 14px `var(--gray-700)`, max 620px: "Our official Technology Capacity Catalogue, built by our
   team. Published ones will be shared with clients and their assigned managers, set up via the
   Manage Clients page."
 - **Create a Virtual Bench** — solid secondary button, 210×45, top-right, wraps under the copy on
@@ -124,7 +126,7 @@ copy distinguishes "nothing created yet" from "nothing matches this search or fi
 ```
 ../SD-3503/                    the bench page View V Bench opens
 ../SD-3504/                    where a client is given access to published benches
-../../../prototype/index.html  → Internal Dashboard → V Benches → VB Suite
+../../../prototype/index.html  → Internal Dashboard → V Benches → Technology Capacity Catalogue
 ```
 
 Repository: https://github.com/luigimf/vbsuite

@@ -1,11 +1,13 @@
-# FE — Manage Client modal: Cobranded field move + VB Suite Access
+# FE — Manage Client modal: Cobranded field move + Technology Capacity Catalogue Access
+
+> **Terminology (12 Oct 2026):** the display term **Technology Capacity Catalogue** replaces "VB Suite" / "Virtual Bench Suite" in all UI copy. Internal identifiers (`vb_suite_*` tables, `entitlements.virtualBenchSuite`) are **unchanged**. The page route is now **`/technology-capacity-catalogue`** (was `/virtual-bench-suite`), and the manager API paths follow it.
 
 Angular handoff for **SD-3504**. Two changes to the **Manage Client** modal on the existing
 Internal Dashboard, reached from **Managers & Clients → Clients**.
 
 > ### ⚠ Not in the prototype
 >
-> This story is **not** represented in the Master VB Suite prototype. The UI is specified in Figma —
+> This story is **not** represented in the Master Technology Capacity Catalogue prototype. The UI is specified in Figma —
 > the three frames linked in the Reference block are the source of truth for layout, spacing and
 > every control state. This document specifies behaviour, not a new visual language.
 
@@ -29,27 +31,27 @@ Internal Dashboard, reached from **Managers & Clients → Clients**.
   no default applied on first open.
 - Validation, enable/disable behaviour and any dependent fields behave exactly as before.
 
-## 2. New box — **VB Suite Access**
+## 2. New box — **Technology Capacity Catalogue Access**
 
 A new box in the same modal, giving a client's managers access to the benches our team publishes in
-the **Master VB Suite** (SD-3502).
+the **Master Technology Capacity Catalogue** (SD-3502).
 
 ### Collapsed state
 
 | Field | Control | Default |
 |---|---|---|
-| **VB Suite Access** | Yes / No | **No** |
+| **Technology Capacity Catalogue Access** | Yes / No | **No** |
 
 - With **No**, the box shows only this field.
 - With **Yes**, the box **expands** to reveal the two selection fields below.
-- UI states: [Figma — VB Suite Access](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16326&t=aTJFhDRsi2oAclPH-11).
+- UI states: [Figma — Technology Capacity Catalogue Access](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16326&t=aTJFhDRsi2oAclPH-11).
 
 ### Expanded state
 
 | Field | Control | Default |
 |---|---|---|
 | **Managers with access** | Multi-select of the managers **within this client organisation** | **All** |
-| **Virtual Benches to be shown** | Multi-select of **Published** benches from the Master VB Suite | **All** |
+| **Virtual Benches to be shown** | Multi-select of **Published** benches from the Master Technology Capacity Catalogue | **All** |
 
 - Both are multi-select pickers with a **select-all / deselect-all tick box** at the top of the
   list, per [Figma — picker states](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16490&t=aTJFhDRsi2oAclPH-11).
@@ -61,12 +63,12 @@ the **Master VB Suite** (SD-3502).
   Archived benches are not offered.
 - Each field shows a count summary when not all are selected (e.g. "3 of 8 selected"); when
   everything is selected it reads **All**.
-- Setting **VB Suite Access** back to **No** collapses the box and **withholds access** from every
+- Setting **Technology Capacity Catalogue Access** back to **No** collapses the box and **withholds access** from every
   manager in the organisation. The selections are retained so switching back to Yes restores them
   rather than resetting to All.
 
 **Acceptance criteria**
-- With access **No**, no manager in the organisation sees the Virtual Bench Suite page at all.
+- With access **No**, no manager in the organisation sees the Technology Capacity Catalogue page at all.
 - With access **Yes** and both fields on **All**, every manager in the organisation sees every
   Published bench.
 - Deselecting a manager removes their access without affecting any other manager.
@@ -79,7 +81,7 @@ the **Master VB Suite** (SD-3502).
 ### Defaults and new benches
 
 - Both fields are left on **All** by default, and **All is a live rule, not a snapshot**: when our
-  team creates and publishes a **new** bench in the Master VB Suite, it appears automatically for
+  team creates and publishes a **new** bench in the Master Technology Capacity Catalogue, it appears automatically for
   every client whose **Virtual Benches to be shown** is on All — with no action in this modal.
 - The same applies to **Managers with access**: a manager added to the organisation later inherits
   access while the field is on All.
@@ -92,11 +94,11 @@ the **Master VB Suite** (SD-3502).
 ## Reference
 
 ```
-../SD-3502/                    the Master VB Suite the access is granted to
+../SD-3502/                    the Master Technology Capacity Catalogue the access is granted to
 ../SD-3503/                    what a manager sees once granted
 ```
 
-Figma — [Cobranded Platform Set Up](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-15999&t=aTJFhDRsi2oAclPH-11) · [VB Suite Access](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16326&t=aTJFhDRsi2oAclPH-11) ·
+Figma — [Cobranded Platform Set Up](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-15999&t=aTJFhDRsi2oAclPH-11) · [Technology Capacity Catalogue Access](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16326&t=aTJFhDRsi2oAclPH-11) ·
 [picker states](https://www.figma.com/design/A4ZWwuOmoeUr7p72TYIiLV/castillians.com?node-id=12666-16490&t=aTJFhDRsi2oAclPH-11)
 
 Repository: https://github.com/luigimf/vbsuite
